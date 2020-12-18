@@ -1,0 +1,88 @@
+<template>
+	<lightning-card title="Calculator" class="slds-m-around_large" style="display: inline-block">
+
+		<div class="slds-form-element slds-m-around_large">
+			<div class="slds-form-element__control slds-border_bottom">
+				<div class="slds-form-element__static">
+					<p>{preview}</p>
+				</div>
+				<div class="slds-form-element__static">
+					<p style="font-size: x-large">{result}</p>
+				</div>
+			</div>
+		</div>
+
+		<table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_header-hidden">
+			<tr>
+				<td>
+					<lightning-button label="C" onclick={handleClickClear}></lightning-button>
+				</td>
+				<td>
+					<lightning-button label="+\-" onclick={handleClickOperator}></lightning-button>
+				</td>
+				<td>
+					<lightning-button label="%" onclick={handleClickOperator}></lightning-button>
+				</td>
+				<td>
+					<lightning-button label="/" onclick={handleClickOperator}></lightning-button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<lightning-button label="1" value=1 onclick={handleClickNumber}></lightning-button>
+				</td>
+				<td>
+					<lightning-button label="2" value=2 onclick={handleClickNumber}></lightning-button>
+				</td>
+				<td>
+					<lightning-button label="3" value=3 onclick={handleClickNumber}></lightning-button>
+				</td>
+				<td>
+					<lightning-button label="x" onclick={handleClickOperator}></lightning-button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<lightning-button label="4" value=4 onclick={handleClickNumber}></lightning-button>
+				</td>
+				<td>
+					<lightning-button label="5" value=5 onclick={handleClickNumber}></lightning-button>
+				</td>
+				<td>
+					<lightning-button label="6" value=6 onclick={handleClickNumber}></lightning-button>
+				</td>
+				<td>
+					<lightning-button label="-" onclick={handleClickOperator}></lightning-button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<lightning-button label="7" value=7 onclick={handleClickNumber}></lightning-button>
+				</td>
+				<td>
+					<lightning-button label="8" value=8 onclick={handleClickNumber}></lightning-button>
+				</td>
+				<td>
+					<lightning-button label="9" value=9 onclick={handleClickNumber}></lightning-button>
+				</td>
+				<td>
+					<lightning-button label="+" onclick={handleClickOperator}></lightning-button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<lightning-button label="00" value="00" onclick={handleClickOperator}></lightning-button>
+				</td>
+				<td>
+					<lightning-button label="0" value=0 onclick={handleClickNumber}></lightning-button>
+				</td>
+				<td>
+					<lightning-button label="." value="." onclick={handleClick}></lightning-button>
+				</td>
+				<td>
+					<lightning-button variant="brand" label="=" onclick={handleClickOperator}></lightning-button>
+				</td>
+			</tr>
+		</table>
+	</lightning-card>
+</template>
